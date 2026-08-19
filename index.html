@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Medibyte Technologies | Medical Coding Platform</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="toast" class="toast"></div>
+
+<section id="loginPage" class="login-page">
+  <div class="login-brand"><div class="logo">M</div><div><strong>Medibyte</strong><small>TECHNOLOGIES</small></div></div>
+  <div class="login-card">
+    <span class="eyebrow">PRIVATE MEDICAL CODING PLATFORM</span>
+    <h1>Medical Coding<br><span>Management System</span></h1>
+    <p>Secure workflow for chart assignment, coding, auditing and performance.</p>
+    <form id="loginForm">
+      <label>User ID / Email</label>
+      <input id="loginId" placeholder="admin@medibyte.com" required>
+      <label>Password</label>
+      <input id="loginPassword" type="password" placeholder="••••••••" required>
+      <label>Role</label>
+      <select id="loginRole">
+        <option value="admin">Admin</option>
+        <option value="employee">Medical Coder</option>
+        <option value="auditor">Auditor</option>
+      </select>
+      <button class="btn primary full">Sign in securely →</button>
+    </form>
+    <div class="demo-login">
+      <b>Demo access</b>
+      <div>
+        <button data-demo="admin">Admin</button>
+        <button data-demo="employee">Employee</button>
+        <button data-demo="auditor">Auditor</button>
+      </div>
+      <small>Any password works in this prototype.</small>
+    </div>
+  </div>
+  <footer>© 2026 Medibyte Technologies · Prototype</footer>
+</section>
+
+<section id="app" class="app hidden">
+  <aside id="sidebar" class="sidebar">
+    <div class="side-brand"><div class="logo">M</div><div><strong>Medibyte</strong><small>TECHNOLOGIES</small></div></div>
+    <div class="nav-label">WORKSPACE</div>
+    <nav id="nav"></nav>
+    <div class="side-bottom">
+      <div class="secure">● Secure workspace</div>
+      <button id="logout" class="logout">↪ Sign out</button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div class="top-left">
+        <button id="menuBtn" class="icon-btn">☰</button>
+        <div><span id="sectionKicker">WORKSPACE</span><h2 id="pageTitle">Dashboard</h2></div>
+      </div>
+      <div class="top-right">
+        <button id="notificationBtn" class="icon-btn notification">♢<i id="notificationDot"></i></button>
+        <div id="currentUser" class="current-user"></div>
+      </div>
+    </header>
+    <div id="content"></div>
+  </main>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
